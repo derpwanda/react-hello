@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My First React App</title>
+</head>
+<body>
+  <div id="target"></div> 
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> 
+  
+  <script type="text/javascript">
+    const myElement = React.createElement('p', {className: 'paragraph'}, 'Super Califragilistic Expealidocious!');
+    console.log(myElement);
+    ReactDOM.render(myElement, document.getElementById('target'));
+
+    <style></style>
+  </script>  
+</body>
+</html>
