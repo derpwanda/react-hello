@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hello World React</title>
+</head>
+
+<body>
+  <div id="target"></div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type='text/babel'>
+import DynamicButton from '../dynamicbutton'
+
+  const myElement = (
+      <div className="heading">
+        <h1>It's Me, Wanda! I'm 35, and born and raised in Missouri.</h1>
+      </div>
+    );
+
+    const MyHeaderComponent = props => {
+      return (
+        <header>
+          <h2>React Is Fun!</h2>
+        </header>
+      );
+    }
+
+    const App = props => { //props = {}
+      return (
+        <div>
+          <MyHeaderComponent />
+          <DynamicButton buttonText={'First Button'} color='blue' />
+          <DynamicButton buttonText={'Second Button'} color='green'/>
+          <DynamicButton buttonText={'Third Button'} color='yellow'/>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('target'));
+
+  </script>
+
+</html>
